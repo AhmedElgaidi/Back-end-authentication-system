@@ -1,0 +1,17 @@
+    <!-- Start header -->
+    <%- include('./partials/header') %> 
+    <!-- End header -->
+
+        <div class="container">
+            <p class="subtitle has-text-weight-semi-bold has-text-danger has-text-centered mt-6">
+                Home page
+            </p>
+        </div>
+        <div class="container is-mobile">
+            <article style="position: fixed; bottom: 0;left: 0;min-width: 30%;">
+                    <%- messages('message', locals) %>
+            </article>
+        </div>
+    <!-- Start Footer -->
+    <%- include('./partials/footer') %> 
+    <!-- End Footer -->

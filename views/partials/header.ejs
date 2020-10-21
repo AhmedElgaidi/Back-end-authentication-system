@@ -1,0 +1,97 @@
+<% if (user) { %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %> 
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+<body>
+    <div class="container"style="max-width: 80%">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item"href="/">
+                    <p class="subtitle has-text-weight-bold"style="color: hsl(348, 100%, 61%)">
+                        Authentication Project
+                    </p>
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    </a>
+            </div>
+            <div class="navbar-menu"id="navMenu">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <a class="has-text-weight-medium"href="/special"style="color: hsl(348, 100%, 61%)">
+                            Special
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <p style="color: hsl(348, 100%, 61%)">
+                            Hello, <%= user.email.split('@')[0].toUpperCase() %> 
+                        </p>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="has-text-weight-medium"href="/logout"style="color: hsl(348, 100%, 61%)">
+                            Log Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr style="margin-top: 6px;">
+<% } else { %> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %> 
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+<body>
+    <div class="container"style="max-width: 80%">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item"href="/">
+                    <p class="subtitle has-text-weight-bold"style="color: hsl(348, 100%, 61%)">
+                        Authentication Project
+                    </p>
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    </a>
+            </div>
+            <div class="navbar-menu"id="navMenu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="has-text-weight-medium"href="/signup"style="color: hsl(348, 100%, 61%)">
+                            Sign Up
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="has-text-weight-medium"href="/login"style="color: hsl(348, 100%, 61%)">
+                            Log In
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr style="margin-top: 6px;">
+<% } %> 

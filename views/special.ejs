@@ -1,0 +1,25 @@
+<%- include('./partials/header') %>
+
+<!--  start body -->
+    <div class="hide container is-mobile">
+        <article class="mb-2 block"style="position: fixed; bottom: 0;left: 2%">
+        <%- messages('message', locals) %>
+        </article>
+    </div>
+    <div class="container" style="max-width: 50%;">
+        <br><br>
+        <p class="has-text-centered has-text-weight-bold subtitle has-text-danger">
+            This is a special page
+        </p>
+        <p class="has-text-centered has-text-weight-bold subtitle has-text-danger">
+            Only authenticated users access it.
+        </p>
+    </div>
+<!-- End body -->
+<%- include('./partials/footer') %>
+<script>
+    const hide = document.querySelector('.hide');
+    setTimeout(()=> {
+        hide.style.display = 'none';
+    }, 2000);
+</script>

@@ -1,0 +1,43 @@
+<div class="container"style="max-width: 80%">
+    <div class="colulmns is-vcentered has-text-centered is-centered"style="margin-left: 30%;margin-right: 40%;position: fixed; bottom: 0;">
+        <strong class="column has-text-grey">
+            Made with Love by Ahmed Elgaidi
+        </strong>
+        <strong class="column has-text-grey">
+            copyright &copy; 2020 
+        </strong>
+    </div>
+</div>
+<!-- End footer -->
+
+<!-- start script tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+        });
+    });
+    }
+
+    });
+</script>
+<!-- End script tag -->
+</body>
+</html>
