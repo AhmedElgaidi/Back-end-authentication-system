@@ -2,7 +2,7 @@
 // It manages the relation between mongodb driver and node.js
 const mongoose = require('mongoose');
 
-// Import a func. from a validator package (string validation package)
+// Import a func. from a validator package (A library of string validators and sanitizers)
 const { isEmail } = require('validator');
 
 const bcrypt = require('bcrypt');// For hashing
