@@ -69,6 +69,16 @@ UserSchema.pre('save', async function(next) {
     next();
 });
 
+//==================================
+// mongoose custom functions
+// we can setup them either by using schema.statics.methodName or schema.mehtods.methodName
+// So, what is the difference then?
+// statics are defined on the model, while methods are defined on document (instance)
+// for example
+// const rita = await Animal.findByName('rita')             // it returns the rita document
+// const cats =  await rita.findBySimilarType()          // it returns all the documents (cats) that have 'cat' type
+//=================================
+
 // Let's create a static method to log user in
 UserSchema.statics.login = async function(email, password) {// so we can use this
     // this now refers to user model not the user instance as previous
