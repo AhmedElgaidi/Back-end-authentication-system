@@ -75,7 +75,9 @@ UserSchema.pre('save', async function(next) {
 // So, what is the difference then?
 // statics are defined on the model, while methods are defined on document (instance)
 // for example
+// static
 // const rita = await Animal.findByName('rita')             // it returns the rita document
+// methods
 // const cats =  await rita.findBySimilarType()          // it returns all the documents (cats) that have 'cat' type
 //=================================
 
