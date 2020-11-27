@@ -1,4 +1,4 @@
-// ODM (Object Data Modeling) library
+// ODM (Object Data Mapping) library
 // It manages the relation between mongodb driver and node.js
 const mongoose = require('mongoose');
 
